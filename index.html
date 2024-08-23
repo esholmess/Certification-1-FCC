@@ -9,7 +9,20 @@
 <body>
     <nav >
         <h1>YAZI</h1>
-        <div id="links"><a href="#published"> Yayın Bilgisi </a><a href="#tribute-info"> Metin</a></div>
+        <div id="links"><a href="#published" id="publink"> Yayın Bilgisi </a><a id="metlink" href="#tribute-info"> Metin</a>
+            <button id="yazarbtn">
+                <p>Yazar</p>
+                <div id="yazar">
+                    <img src="ko.jpg">
+                    <p>İlknur Yaren Karakoç</p>
+                    <div class="yazarlink">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Github</a>
+                    <a href="#">Instagram</a>
+                </div>
+                </div>
+            </button>
+        </div>
 
     </nav>
     <main>
@@ -36,12 +49,25 @@
                </p>
     <p class="metin">Açlıktan mı çaresizlikten mi bilinmez; ekşi, acı bir hissiyat vardı midesinde. Dili damağına yapışmıştı. Yaşlı adam da amma sabırsızdı.  Unutmaya çalıştı, resme geri döndü , ancak böyle hafifliyordu açlığı....
        </p>
+       <p class="metin" id="name">İlknur Yaren Karakoç
+    </p>
         </div>
     </main>
     <footer>
         <a id="tribute-link" href="//www.linkedin.com/in/ilknur-yaren-k-51058831b/"><p>İlknur Yaren K. @LinkedIn</p></a>
    </footer>
 
+   <script>
+    //smooth transitions
+        document.getElementById('publink').addEventListener('click', (event) => {
+        event.preventDefault();
+        document.querySelector('#published').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('metlink').addEventListener('click', (event) => {
+        event.preventDefault();
+        document.querySelector('.tutsak').scrollIntoView({ behavior: 'smooth' });
+    });
+   </script>
     
 </body>
 </html>
